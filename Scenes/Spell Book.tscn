@@ -1,16 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://GUI/BlackBackground.png" type="Texture" id=1]
-[ext_resource path="res://GUI/LightGrayBackground.png" type="Texture" id=2]
-[ext_resource path="res://GUI/GrayBackground.png" type="Texture" id=3]
+[ext_resource path="res://Pictures/GUI/BlackBackground.png" type="Texture" id=1]
+[ext_resource path="res://Pictures/GUI/LightGrayBackground.png" type="Texture" id=2]
+[ext_resource path="res://Pictures/GUI/GrayBackground.png" type="Texture" id=3]
 [ext_resource path="res://Halloween9.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Textures/Fiery.jpg" type="Texture" id=5]
-[ext_resource path="res://Textures/DirtyPaperTexture.jpg" type="Texture" id=6]
+[ext_resource path="res://Pictures/GUI/DarkRedBackground.png" type="Texture" id=5]
 [ext_resource path="res://Halloween Nightmare Demo (daFONT).ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://GUI/SkeletonIcon.png" type="Texture" id=8]
-[ext_resource path="res://Spell Book.gd" type="Script" id=9]
-[ext_resource path="res://SpellSlot.gd" type="Script" id=10]
-[ext_resource path="res://Spell.gd" type="Script" id=11]
+[ext_resource path="res://Pictures/GUI/SkeletonIcon.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Spell Book.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/SpellSlot.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Spell.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 6
@@ -40,7 +39,6 @@ margin_left = 202.021
 margin_top = 5.35355
 margin_right = 312.021
 margin_bottom = 145.354
-texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,7 +50,7 @@ margin_left = 3.0
 margin_top = 3.0
 margin_right = -3.0
 margin_bottom = -3.0
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

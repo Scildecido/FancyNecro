@@ -1,27 +1,25 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Well.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets.png" type="Texture" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Hut.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Skeleton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Rock.tscn" type="PackedScene" id=6]
-[ext_resource path="res://GUI/Slotbar2.png" type="Texture" id=7]
-[ext_resource path="res://Spell Book.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Slot.gd" type="Script" id=9]
-[ext_resource path="res://Grave1.tscn" type="PackedScene" id=10]
-[ext_resource path="res://YSortObjects.gd" type="Script" id=11]
-[ext_resource path="res://World.gd" type="Script" id=12]
-[ext_resource path="res://GUI/Icons/SoulsCount.png" type="Texture" id=13]
-[ext_resource path="res://GUI/HealthbarContainer.png" type="Texture" id=14]
-[ext_resource path="res://GUI/HealthbarProgress.png" type="Texture" id=15]
-[ext_resource path="res://GUI/Icons/WorkerCount.png" type="Texture" id=16]
-[ext_resource path="res://GUI/Icons/MinionCount.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Well.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Hut.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Skeleton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Pictures/GUI/Slotbar2.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Slot.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Grave1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/YSortObjects.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=12]
+[ext_resource path="res://Pictures/GUI/Icons/SoulsCount.png" type="Texture" id=13]
+[ext_resource path="res://Pictures/GUI/HealthbarContainer.png" type="Texture" id=14]
+[ext_resource path="res://Pictures/GUI/HealthbarProgress.png" type="Texture" id=15]
+[ext_resource path="res://Pictures/GUI/Icons/WorkerCount.png" type="Texture" id=16]
+[ext_resource path="res://Pictures/GUI/Icons/MinionCount.png" type="Texture" id=17]
 [ext_resource path="res://Halloween9.tres" type="DynamicFont" id=18]
-[ext_resource path="res://GUI/HpManaPanel.png" type="Texture" id=19]
-[ext_resource path="res://Terrain/Groundwork.png" type="Texture" id=20]
-[ext_resource path="res://MenuStats.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Door.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Pictures/GUI/HpManaPanel.png" type="Texture" id=19]
+[ext_resource path="res://Pictures/Terrain/Groundwork.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/MenuStats.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=22]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Groundwork.png 0"
@@ -142,7 +140,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 
 [sub_resource type="TileSet" id=3]
 0/name = "Assets.png 0"
-0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 128, 0, 64, 64 )
@@ -163,7 +160,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 } ]
 0/z_index = 0
 1/name = "Assets.png 1"
-1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 64, 0, 64, 64 )
@@ -177,7 +173,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Assets.png 2"
-2/texture = ExtResource( 2 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 64, 64, 64 )
@@ -191,7 +186,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Assets.png 3"
-3/texture = ExtResource( 2 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 128, 64, 64, 64 )
@@ -205,7 +199,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Assets.png 4"
-4/texture = ExtResource( 2 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 16, 304, 144, 144 )
@@ -219,7 +212,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "Assets.png 5"
-5/texture = ExtResource( 2 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 352, 320, 64, 64 )
@@ -233,7 +225,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Assets.png 6"
-6/texture = ExtResource( 2 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 416, 320, 64, 64 )
@@ -247,7 +238,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Assets.png 7"
-7/texture = ExtResource( 2 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 352, 384, 64, 64 )
@@ -261,7 +251,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Assets.png 8"
-8/texture = ExtResource( 2 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 416, 384, 64, 64 )
@@ -275,7 +264,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 8/shapes = [  ]
 8/z_index = 0
 10/name = "Assets.png 10"
-10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 368, 80, 80, 96 )
@@ -289,7 +277,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 10/shapes = [  ]
 10/z_index = 0
 11/name = "Assets.png 11"
-11/texture = ExtResource( 2 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 448, 144, 48, 32 )
@@ -303,7 +290,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "Assets.png 12"
-12/texture = ExtResource( 2 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 336, 192, 32, 48 )
@@ -317,7 +303,6 @@ points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
 12/shapes = [  ]
 12/z_index = 0
 14/name = "Assets.png 14"
-14/texture = ExtResource( 2 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 240, 16, 64, 64 )
@@ -349,7 +334,7 @@ tile_data = PoolIntArray( -196612, 536870914, 0, -262144, 536870914, 0, -262140,
 
 [node name="Door" parent="." instance=ExtResource( 22 )]
 position = Vector2( 376.539, 147.011 )
-next_map = "res://HutInside.tscn"
+next_map = "res://Scenes/HutInside.tscn"
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -479,6 +464,7 @@ __meta__ = {
 }
 
 [node name="InfoSquares" type="Control" parent="GUI"]
+visible = false
 margin_right = 127.0
 margin_bottom = 62.0
 __meta__ = {
@@ -486,7 +472,6 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GUI/InfoSquares"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -31.0
@@ -495,13 +480,13 @@ __meta__ = {
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="GUI/InfoSquares/HBoxContainer"]
+visible = false
 margin_right = 5.0
 margin_bottom = 31.0
 rect_min_size = Vector2( 5, 0 )
 
 [node name="Minions" type="TextureRect" parent="GUI/InfoSquares/HBoxContainer"]
-margin_left = 9.0
-margin_right = 29.0
+margin_right = 20.0
 margin_bottom = 31.0
 texture = ExtResource( 17 )
 stretch_mode = 6
@@ -510,8 +495,8 @@ __meta__ = {
 }
 
 [node name="Workers" type="TextureRect" parent="GUI/InfoSquares/HBoxContainer"]
-margin_left = 33.0
-margin_right = 59.0
+margin_left = 24.0
+margin_right = 50.0
 margin_bottom = 31.0
 texture = ExtResource( 16 )
 stretch_mode = 6
@@ -520,8 +505,8 @@ __meta__ = {
 }
 
 [node name="Souls" type="TextureRect" parent="GUI/InfoSquares/HBoxContainer"]
-margin_left = 63.0
-margin_right = 84.0
+margin_left = 54.0
+margin_right = 75.0
 margin_bottom = 31.0
 texture = ExtResource( 13 )
 stretch_mode = 6
@@ -807,10 +792,3 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="SpellBookMenu" parent="GUI/Menus" instance=ExtResource( 8 )]
-visible = false
-
-[connection signal="summon" from="YSort/Player" to="YSort/YSortObjects" method="_on_Player_summon"]
-[connection signal="run" from="GUI/Menus/SpellBookMenu" to="YSort/Player" method="_on_SpellBookMenu_run"]
-[connection signal="stop" from="GUI/Menus/SpellBookMenu" to="YSort/Player" method="_on_SpellBookMenu_stop"]

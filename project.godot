@@ -11,13 +11,13 @@ config_version=4
 [application]
 
 config/name="Fancy Necromancy"
-run/main_scene="res://Menu.tscn"
+run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-PlayerData="*res://PlayerData.gd"
-GameData="*res://GameData.gd"
+GameData="*res://Scripts/GameData.gd"
+PlayerData="*res://Scripts/PlayerData.gd"
 
 [display]
 
