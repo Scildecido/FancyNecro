@@ -1,0 +1,1368 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://GUI/UIPages/SpellbookInventory.png" type="Texture" id=1]
+[ext_resource path="res://GUI/CloseButtont.png" type="Texture" id=2]
+[ext_resource path="res://MenuStatsNew.gd" type="Script" id=3]
+[ext_resource path="res://GUI/UIPages/System.png" type="Texture" id=4]
+[ext_resource path="res://GUI/UIPages/SpellbookMap.png" type="Texture" id=5]
+[ext_resource path="res://GUI/UIPages/SpellbookSupport.png" type="Texture" id=6]
+[ext_resource path="res://GUI/UIPages/Encyclopedia.png" type="Texture" id=7]
+[ext_resource path="res://GUI/UIPages/SpellbookOffensive.png" type="Texture" id=8]
+[ext_resource path="res://GUI/UIPages/Stats.png" type="Texture" id=9]
+[ext_resource path="res://GUI/UIPages/SpellbookDefense.png" type="Texture" id=10]
+[ext_resource path="res://GUI/UIPages/SpellbookSkeleton.png" type="Texture" id=11]
+[ext_resource path="res://GUI/UIPages/SpellbookZombie.png" type="Texture" id=12]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuUi" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Statsmenu" type="TextureRect" parent="MenuUi"]
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Statsmenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/Statsmenu/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Statsmenu/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/Statsmenu/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="SpellbookSkele" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookSkele"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/SpellbookSkele/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/SpellbookSkele/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="SpellbookZombie" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookZombie"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/SpellbookZombie/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/SpellbookZombie/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="SpellbookOffensive" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookOffensive"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/SpellbookOffensive/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="SpellbookDefensive" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookDefensive"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/SpellbookDefensive/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="SpellbookSupport" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookSupport"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/SpellbookSupport/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/SpellbookSupport/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Inventory" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Inventory"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/Inventory/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Inventory/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/Inventory/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Map" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Map"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Map/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/Map/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Map/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/Map/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Encyclopedia" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Encyclopedia"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/Encyclopedia/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/Encyclopedia/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="System" type="TextureRect" parent="MenuUi"]
+visible = false
+margin_right = 540.0
+margin_bottom = 300.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/System"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 31.0
+margin_right = -76.0
+margin_bottom = -76.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/System/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 4.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="Tabs" type="HBoxContainer" parent="MenuUi/System/VBoxContainer"]
+margin_top = 5.0
+margin_right = 384.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 14 )
+custom_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_right = 59.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 59, 0 )
+
+[node name="StatsButtons" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 59.0
+margin_right = 99.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 99.0
+margin_right = 102.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SpellbookButton" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 102.0
+margin_right = 142.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 142.0
+margin_right = 145.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="InventoryButton" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 145.0
+margin_right = 185.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer4" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 185.0
+margin_right = 188.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="MapButton" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 188.0
+margin_right = 228.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer5" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 228.0
+margin_right = 231.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="LoreButton" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 231.0
+margin_right = 271.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer6" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 271.0
+margin_right = 274.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="SystemButton" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 274.0
+margin_right = 314.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer7" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 314.0
+margin_right = 317.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 3, 0 )
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 317.0
+margin_right = 357.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="MarginContainer8" type="MarginContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 357.0
+margin_right = 366.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 9, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUi/System/VBoxContainer/Tabs"]
+margin_left = 366.0
+margin_right = 374.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuUi/System/VBoxContainer/Tabs/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+expand = true

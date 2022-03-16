@@ -1,0 +1,13 @@
+[
+    {
+        "id": 10001,
+        "name": "Skeleton",
+        "hp": 50,
+        "strength": 5,
+        "mana": 0,
+        "damage": "2021-03-04T05:00:00.000Z",
+        "defense": 2,
+        "speed": 3,
+        "range": 1
+    }
+]

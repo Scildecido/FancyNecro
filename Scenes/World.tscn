@@ -1,0 +1,816 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Well.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets.png" type="Texture" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hut.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Skeleton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Rock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GUI/Slotbar2.png" type="Texture" id=7]
+[ext_resource path="res://Spell Book.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Slot.gd" type="Script" id=9]
+[ext_resource path="res://Grave1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://YSortObjects.gd" type="Script" id=11]
+[ext_resource path="res://World.gd" type="Script" id=12]
+[ext_resource path="res://GUI/Icons/SoulsCount.png" type="Texture" id=13]
+[ext_resource path="res://GUI/HealthbarContainer.png" type="Texture" id=14]
+[ext_resource path="res://GUI/HealthbarProgress.png" type="Texture" id=15]
+[ext_resource path="res://GUI/Icons/WorkerCount.png" type="Texture" id=16]
+[ext_resource path="res://GUI/Icons/MinionCount.png" type="Texture" id=17]
+[ext_resource path="res://Halloween9.tres" type="DynamicFont" id=18]
+[ext_resource path="res://GUI/HpManaPanel.png" type="Texture" id=19]
+[ext_resource path="res://Terrain/Groundwork.png" type="Texture" id=20]
+[ext_resource path="res://MenuStats.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=22]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Groundwork.png 0"
+0/texture = ExtResource( 20 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 192, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Groundwork.png 1"
+1/texture = ExtResource( 20 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Groundwork.png 2"
+2/texture = ExtResource( 20 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 144, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Groundwork.png 3"
+3/texture = ExtResource( 20 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 144, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Groundwork.png 4"
+4/texture = ExtResource( 20 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 192, 144, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Groundwork.png 5"
+5/texture = ExtResource( 20 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 208, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Groundwork.png 6"
+6/texture = ExtResource( 20 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 208, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Groundwork.png 7"
+7/texture = ExtResource( 20 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 192, 208, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 144, 144, 0, 144, 0, 0, 144, 0 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "Assets.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Assets.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Assets.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 64, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Assets.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 64, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Assets.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 16, 304, 144, 144 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Assets.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 352, 320, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Assets.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 416, 320, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Assets.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 352, 384, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Assets.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 416, 384, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+10/name = "Assets.png 10"
+10/texture = ExtResource( 2 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 368, 80, 80, 96 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Assets.png 11"
+11/texture = ExtResource( 2 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 448, 144, 48, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Assets.png 12"
+12/texture = ExtResource( 2 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 336, 192, 32, 48 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+14/name = "Assets.png 14"
+14/texture = ExtResource( 2 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 240, 16, 64, 64 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+
+[node name="World" type="Node"]
+script = ExtResource( 12 )
+grave1 = ExtResource( 10 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( -65536, 1, 0, -65535, 0, 0, -65534, 1, 0, -65533, 0, 0, -65532, 1, 0, -65531, 0, 0, -65530, 1, 0, -65529, 0, 0, -65528, 1, 0, -65527, 0, 0, -65526, 1, 0, -65525, 0, 0, -65524, 0, 0, 0, 5, 0, 1, 4, 0, 2, 7, 0, 3, 7, 0, 4, 6, 0, 5, 7, 0, 6, 7, 0, 7, 5, 0, 8, 7, 0, 9, 7, 0, 10, 3, 0, 11, 4, 0, 12, 5, 0, 65536, 4, 0, 65537, 5, 0, 65538, 7, 0, 65539, 2, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 7, 0, 65545, 5, 0, 65546, 3, 0, 65547, 7, 0, 65548, 5, 0, 131072, 7, 0, 131073, 3, 0, 131074, 5, 0, 131075, 3, 0, 131076, 4, 0, 131077, 3, 0, 131078, 3, 0, 131079, 7, 0, 131080, 7, 0, 131081, 5, 0, 131082, 7, 0, 131083, 7, 0, 131084, 7, 0, 196608, 7, 0, 196609, 6, 0, 196610, 7, 0, 196611, 4, 0, 196612, 3, 0, 196613, 3, 0, 196614, 3, 0, 196615, 6, 0, 196616, 6, 0, 196617, 3, 0, 196618, 6, 0, 196619, 5, 0, 196620, 5, 0, 262144, 5, 0, 262145, 5, 0, 262146, 6, 0, 262147, 6, 0, 262148, 7, 0, 262149, 6, 0, 262150, 7, 0, 262151, 7, 0, 262152, 7, 0, 262153, 3, 0, 262154, 7, 0, 262155, 5, 0, 262156, 5, 0, 327680, 7, 0, 327681, 4, 0, 327682, 5, 0, 327683, 4, 0, 327684, 5, 0, 327685, 5, 0, 327686, 5, 0, 327687, 5, 0, 327688, 4, 0, 327689, 4, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -196612, 536870914, 0, -262144, 536870914, 0, -262140, 536870914, 0, -262136, 536870914, 0, -262132, 536870914, 0, -262128, 536870914, 0, -262124, 536870914, 0, -262120, 536870914, 0, -262116, 536870914, 0, -262112, 536870914, 0, -262108, 536870914, 0, -262104, 536870914, 0, -262100, 536870914, 0, 65532, 536870912, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0, 12, 1, 0, 16, 1, 0, 20, 1, 0, 24, 1, 0, 28, 1, 0, 32, 1, 0, 36, 1, 0, 40, 1, 0, 44, 0, 0, 327676, 536870915, 0, 262144, 8, 0, 262148, 5, 0, 262152, 6, 0, 262156, 7, 0, 262160, 6, 0, 262164, 2, 0, 262168, 2, 0, 262172, 8, 0, 262176, 2, 0, 262180, 7, 0, 262184, 2, 0, 262188, 3, 0, 589820, 536870915, 0, 524288, 6, 0, 524292, 7, 0, 524296, 8, 0, 524300, 2, 0, 524304, 7, 0, 524308, 6, 0, 524312, 6, 0, 524316, 7, 0, 524320, 6, 0, 524324, 2, 0, 524328, 6, 0, 524332, 3, 0, 851964, 536870915, 0, 786432, 8, 0, 786436, 6, 0, 786440, 2, 0, 786444, 8, 0, 786448, 2, 0, 786452, 8, 0, 786453, 8, 0, 786456, 2, 0, 786460, 7, 0, 786464, 6, 0, 786468, 6, 0, 786472, 8, 0, 786476, 3, 0, 1114108, 536870915, 0, 1048576, 7, 0, 1048580, 8, 0, 1048584, 6, 0, 1048588, 2, 0, 1048592, 2, 0, 1048596, 2, 0, 1048600, 7, 0, 1048604, 6, 0, 1048608, 2, 0, 1048612, 2, 0, 1048616, 6, 0, 1048620, 3, 0, 1376252, 536870915, 0, 1310720, 8, 0, 1310724, 7, 0, 1310728, 7, 0, 1310732, 8, 0, 1310736, 6, 0, 1310737, 6, 0, 1310740, 7, 0, 1310744, 6, 0, 1310748, 6, 0, 1310752, 7, 0, 1310756, 2, 0, 1310760, 8, 0, 1310764, 3, 0 )
+
+[node name="Door" parent="." instance=ExtResource( 22 )]
+position = Vector2( 376.539, 147.011 )
+next_map = "res://HutInside.tscn"
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 376, 160 )
+
+[node name="Skeleton" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 472, 136 )
+
+[node name="YSortObjects" type="YSort" parent="YSort"]
+script = ExtResource( 11 )
+grave1 = ExtResource( 10 )
+
+[node name="Hut" parent="YSort/YSortObjects" instance=ExtResource( 4 )]
+position = Vector2( 376, 64 )
+
+[node name="Well" parent="YSort/YSortObjects" instance=ExtResource( 1 )]
+position = Vector2( 584, 88 )
+
+[node name="Rock" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 232, 224 )
+
+[node name="Rock2" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 368, 288 )
+
+[node name="Rock3" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 648, 208 )
+
+[node name="Grave" parent="YSort/YSortObjects" instance=ExtResource( 10 )]
+position = Vector2( 423.272, 206.766 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="ResourceBars" type="Control" parent="GUI"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Manabar" type="TextureProgress" parent="GUI/ResourceBars"]
+margin_left = 438.424
+margin_top = 2.35883
+margin_right = 535.424
+margin_bottom = 11.3588
+value = 100.0
+texture_under = ExtResource( 14 )
+texture_progress = ExtResource( 15 )
+tint_under = Color( 0.545098, 0.517647, 0.517647, 0.807843 )
+tint_progress = Color( 0.145098, 0.2, 0.654902, 0.768627 )
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Healthbar" type="TextureProgress" parent="GUI/ResourceBars"]
+margin_left = 466.834
+margin_top = 18.3523
+margin_right = 534.834
+margin_bottom = 27.3523
+value = 100.0
+texture_under = ExtResource( 14 )
+texture_progress = ExtResource( 15 )
+tint_under = Color( 0.545098, 0.517647, 0.517647, 0.807843 )
+tint_progress = Color( 0.678431, 0.207843, 0.207843, 0.768627 )
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="TextureRect" parent="GUI/ResourceBars"]
+show_behind_parent = true
+margin_left = 493.632
+margin_top = 21.5983
+margin_right = 530.632
+margin_bottom = 36.5983
+texture = ExtResource( 19 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GUI/ResourceBars/HP"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.83258
+margin_top = -11.811
+margin_right = 7.16742
+margin_bottom = 2.18898
+custom_fonts/font = ExtResource( 18 )
+text = "HP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mana" type="TextureRect" parent="GUI/ResourceBars"]
+show_behind_parent = true
+margin_left = 493.929
+margin_top = 7.51148
+margin_right = 530.929
+margin_bottom = 22.5115
+texture = ExtResource( 19 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GUI/ResourceBars/Mana"]
+margin_left = 7.77948
+margin_top = 1.66742
+margin_right = 37.7795
+margin_bottom = 16.6674
+custom_fonts/font = ExtResource( 18 )
+text = "Mana"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoSquares" type="Control" parent="GUI"]
+margin_right = 127.0
+margin_bottom = 62.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/InfoSquares"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -31.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/InfoSquares/HBoxContainer"]
+margin_right = 5.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 5, 0 )
+
+[node name="Minions" type="TextureRect" parent="GUI/InfoSquares/HBoxContainer"]
+margin_left = 9.0
+margin_right = 29.0
+margin_bottom = 31.0
+texture = ExtResource( 17 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Workers" type="TextureRect" parent="GUI/InfoSquares/HBoxContainer"]
+margin_left = 33.0
+margin_right = 59.0
+margin_bottom = 31.0
+texture = ExtResource( 16 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Souls" type="TextureRect" parent="GUI/InfoSquares/HBoxContainer"]
+margin_left = 63.0
+margin_right = 84.0
+margin_bottom = 31.0
+texture = ExtResource( 13 )
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="GUI/InfoSquares"]
+visible = false
+show_behind_parent = true
+anchor_left = 0.00262764
+anchor_right = 1.00263
+anchor_bottom = 1.0
+margin_left = -0.33371
+margin_right = -36.3337
+margin_bottom = -17.0
+color = Color( 0.301961, 0.286275, 0.309804, 0.776471 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Labels" type="HBoxContainer" parent="GUI/InfoSquares"]
+visible = false
+margin_top = 27.0
+margin_right = 91.0
+margin_bottom = 47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/InfoSquares/Labels"]
+margin_right = 7.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 7, 0 )
+
+[node name="Label" type="Label" parent="GUI/InfoSquares/Labels"]
+margin_left = 11.0
+margin_top = 4.0
+margin_right = 31.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 20, 4 )
+custom_fonts/font = ExtResource( 18 )
+text = "x2"
+
+[node name="MarginContainer3" type="MarginContainer" parent="GUI/InfoSquares/Labels"]
+margin_left = 35.0
+margin_right = 36.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 1, 0 )
+
+[node name="Label2" type="Label" parent="GUI/InfoSquares/Labels"]
+margin_left = 40.0
+margin_top = 4.0
+margin_right = 60.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 20, 4 )
+custom_fonts/font = ExtResource( 18 )
+text = "x0"
+
+[node name="MarginContainer2" type="MarginContainer" parent="GUI/InfoSquares/Labels"]
+margin_left = 64.0
+margin_right = 65.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 1, 0 )
+
+[node name="Label3" type="Label" parent="GUI/InfoSquares/Labels"]
+margin_left = 69.0
+margin_top = 4.0
+margin_right = 89.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 20, 4 )
+custom_fonts/font = ExtResource( 18 )
+text = "x0"
+
+[node name="TextureRect" type="TextureRect" parent="GUI/InfoSquares"]
+margin_left = 213.0
+margin_top = 229.0
+margin_right = 233.0
+margin_bottom = 251.0
+texture = ExtResource( 17 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GUI/InfoSquares/TextureRect"]
+margin_left = 23.3513
+margin_top = 1.31618
+margin_right = 43.3513
+margin_bottom = 18.3162
+custom_fonts/font = ExtResource( 18 )
+text = "2/2"
+
+[node name="Menus" type="Control" parent="GUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" parent="GUI/Menus" instance=ExtResource( 21 )]
+visible = false
+
+[node name="SkillBar" type="Control" parent="GUI/Menus"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="GUI/Menus/SkillBar"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -154.0
+margin_top = -67.0
+margin_right = 154.0
+grow_horizontal = 2
+grow_vertical = 0
+rect_min_size = Vector2( 190, 25 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullBarContainer" type="HBoxContainer" parent="GUI/Menus/SkillBar/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = 28.0
+margin_right = -12.0
+margin_bottom = -9.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="VBoxContainer" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer"]
+margin_right = 287.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_constants/separation = -1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconContainer" type="GridContainer" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer"]
+margin_right = 287.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_constants/hseparation = 2
+columns = 10
+
+[node name="Slot1" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 32.0
+margin_right = 62.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect5" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 64.0
+margin_right = 94.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect4" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot4" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 96.0
+margin_right = 126.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect3" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot5" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 128.0
+margin_right = 158.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect4" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot6" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 160.0
+margin_right = 190.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect2" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot7" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 192.0
+margin_right = 222.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect3" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot8" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 224.0
+margin_right = 254.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect4" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot9" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer"]
+margin_left = 256.0
+margin_right = 286.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="TextureRect5" type="TextureRect" parent="GUI/Menus/SkillBar/TextureRect/FullBarContainer/HBoxContainer/IconContainer/Slot9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellBookMenu" parent="GUI/Menus" instance=ExtResource( 8 )]
+visible = false
+
+[connection signal="summon" from="YSort/Player" to="YSort/YSortObjects" method="_on_Player_summon"]
+[connection signal="run" from="GUI/Menus/SpellBookMenu" to="YSort/Player" method="_on_SpellBookMenu_run"]
+[connection signal="stop" from="GUI/Menus/SpellBookMenu" to="YSort/Player" method="_on_SpellBookMenu_stop"]

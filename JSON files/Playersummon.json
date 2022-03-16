@@ -1,0 +1,13 @@
+{
+  "10001": {
+    "Category": "Spell",
+    "Name": "Skeleton",
+    "Hp": 50,
+    "Strength": 5,
+    "Mana": 0,
+    "Damage": 3,
+    "Defense": 2,
+    "Speed": 3,
+    "Range": 1
+  }
+}
