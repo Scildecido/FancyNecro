@@ -3,10 +3,9 @@
 [ext_resource path="res://Scripts/HutInside.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 33.0079, 21.3224 )
+extents = Vector2( 21.9115, 8.92305 )
 
 [node name="Door" type="Area2D"]
-position = Vector2( 191.607, 330.356 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

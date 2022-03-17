@@ -1,11 +1,12 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Well.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Objects/RockTypeB.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Hut.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Skeleton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Objects/RockTypeC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Pictures/GUI/Slotbar2.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Objects/RockTypeA.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Slot.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Grave1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scripts/YSortObjects.gd" type="Script" id=11]
@@ -20,6 +21,8 @@
 [ext_resource path="res://Pictures/Terrain/Groundwork.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/MenuStats.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Hut2x.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Objects/BoneTypeA.tscn" type="PackedScene" id=24]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Groundwork.png 0"
@@ -333,13 +336,13 @@ format = 1
 tile_data = PoolIntArray( -196612, 536870914, 0, -262144, 536870914, 0, -262140, 536870914, 0, -262136, 536870914, 0, -262132, 536870914, 0, -262128, 536870914, 0, -262124, 536870914, 0, -262120, 536870914, 0, -262116, 536870914, 0, -262112, 536870914, 0, -262108, 536870914, 0, -262104, 536870914, 0, -262100, 536870914, 0, 65532, 536870912, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0, 12, 1, 0, 16, 1, 0, 20, 1, 0, 24, 1, 0, 28, 1, 0, 32, 1, 0, 36, 1, 0, 40, 1, 0, 44, 0, 0, 327676, 536870915, 0, 262144, 8, 0, 262148, 5, 0, 262152, 6, 0, 262156, 7, 0, 262160, 6, 0, 262164, 2, 0, 262168, 2, 0, 262172, 8, 0, 262176, 2, 0, 262180, 7, 0, 262184, 2, 0, 262188, 3, 0, 589820, 536870915, 0, 524288, 6, 0, 524292, 7, 0, 524296, 8, 0, 524300, 2, 0, 524304, 7, 0, 524308, 6, 0, 524312, 6, 0, 524316, 7, 0, 524320, 6, 0, 524324, 2, 0, 524328, 6, 0, 524332, 3, 0, 851964, 536870915, 0, 786432, 8, 0, 786436, 6, 0, 786440, 2, 0, 786444, 8, 0, 786448, 2, 0, 786452, 8, 0, 786453, 8, 0, 786456, 2, 0, 786460, 7, 0, 786464, 6, 0, 786468, 6, 0, 786472, 8, 0, 786476, 3, 0, 1114108, 536870915, 0, 1048576, 7, 0, 1048580, 8, 0, 1048584, 6, 0, 1048588, 2, 0, 1048592, 2, 0, 1048596, 2, 0, 1048600, 7, 0, 1048604, 6, 0, 1048608, 2, 0, 1048612, 2, 0, 1048616, 6, 0, 1048620, 3, 0, 1376252, 536870915, 0, 1310720, 8, 0, 1310724, 7, 0, 1310728, 7, 0, 1310732, 8, 0, 1310736, 6, 0, 1310737, 6, 0, 1310740, 7, 0, 1310744, 6, 0, 1310748, 6, 0, 1310752, 7, 0, 1310756, 2, 0, 1310760, 8, 0, 1310764, 3, 0 )
 
 [node name="Door" parent="." instance=ExtResource( 22 )]
-position = Vector2( 376.539, 147.011 )
+position = Vector2( 308.359, 94.8917 )
 next_map = "res://Scenes/HutInside.tscn"
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 376, 160 )
+position = Vector2( 306.008, 127.681 )
 
 [node name="Skeleton" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 472, 136 )
@@ -348,23 +351,80 @@ position = Vector2( 472, 136 )
 script = ExtResource( 11 )
 grave1 = ExtResource( 10 )
 
-[node name="Hut" parent="YSort/YSortObjects" instance=ExtResource( 4 )]
-position = Vector2( 376, 64 )
+[node name="RockTypeA" parent="YSort/YSortObjects" instance=ExtResource( 8 )]
+position = Vector2( 192.985, 275.38 )
+
+[node name="RockTypeA2" parent="YSort/YSortObjects" instance=ExtResource( 8 )]
+position = Vector2( 413.815, 267.764 )
+
+[node name="RockTypeA3" parent="YSort/YSortObjects" instance=ExtResource( 8 )]
+position = Vector2( 254.727, 270.066 )
+
+[node name="RockTypeA4" parent="YSort/YSortObjects" instance=ExtResource( 8 )]
+position = Vector2( 301.874, 325.041 )
+
+[node name="RockTypeB" parent="YSort/YSortObjects" instance=ExtResource( 2 )]
+position = Vector2( 222.701, 316.539 )
+
+[node name="RockTypeB2" parent="YSort/YSortObjects" instance=ExtResource( 2 )]
+position = Vector2( 221.579, 292.967 )
+
+[node name="RockTypeB3" parent="YSort/YSortObjects" instance=ExtResource( 2 )]
+position = Vector2( 64.8624, 250.588 )
+
+[node name="RockTypeB4" parent="YSort/YSortObjects" instance=ExtResource( 2 )]
+position = Vector2( 381.61, 269.711 )
+
+[node name="RockTypeB5" parent="YSort/YSortObjects" instance=ExtResource( 2 )]
+position = Vector2( 254.181, 293.892 )
+
+[node name="Hut2" parent="YSort/YSortObjects" instance=ExtResource( 23 )]
+position = Vector2( 304.121, 49.0007 )
 
 [node name="Well" parent="YSort/YSortObjects" instance=ExtResource( 1 )]
 position = Vector2( 584, 88 )
 
-[node name="Rock" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
-position = Vector2( 232, 224 )
-
-[node name="Rock2" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
-position = Vector2( 368, 288 )
-
-[node name="Rock3" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
-position = Vector2( 648, 208 )
-
 [node name="Grave" parent="YSort/YSortObjects" instance=ExtResource( 10 )]
 position = Vector2( 423.272, 206.766 )
+
+[node name="RockTypeC" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 83.9658, 312.768 )
+
+[node name="RockTypeC2" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 337.18, 328.875 )
+
+[node name="RockTypeC3" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 358.16, 274.566 )
+
+[node name="RockTypeC4" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 383.488, 291.67 )
+
+[node name="BoneTypeA" parent="YSort/YSortObjects" instance=ExtResource( 24 )]
+position = Vector2( 123.168, 168.402 )
+
+[node name="BoneTypeA2" parent="YSort/YSortObjects" instance=ExtResource( 24 )]
+position = Vector2( 515.725, 265.418 )
+
+[node name="BoneTypeA3" parent="YSort/YSortObjects" instance=ExtResource( 24 )]
+position = Vector2( 156.54, 186.872 )
+
+[node name="BoneTypeA4" parent="YSort/YSortObjects" instance=ExtResource( 24 )]
+position = Vector2( 744.316, 310.951 )
+
+[node name="RockTypeC6" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 671.742, 178.698 )
+
+[node name="RockTypeB6" parent="YSort/YSortObjects" instance=ExtResource( 2 )]
+position = Vector2( 625.956, 296.628 )
+
+[node name="RockTypeA5" parent="YSort/YSortObjects" instance=ExtResource( 8 )]
+position = Vector2( 751.658, 207.237 )
+
+[node name="RockTypeC7" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 591.578, 204.89 )
+
+[node name="RockTypeC5" parent="YSort/YSortObjects" instance=ExtResource( 6 )]
+position = Vector2( 44.2606, 185.787 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
@@ -598,6 +658,7 @@ custom_fonts/font = ExtResource( 18 )
 text = "2/2"
 
 [node name="Menus" type="Control" parent="GUI"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
